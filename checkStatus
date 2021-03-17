@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+rm -f $3
+#dollar 1 is de string bestanden
+for file in $(ls "$1"); do
+if $($2 $file > /dev/null 2>/dev/null);then
+echo "Het is gelukt $2 uit tevoeren op $file" >> "$3"
+else
+echo "Het is niet gelukt $2 uit tevoeren op $file" >> "$3"
+fi
+done
