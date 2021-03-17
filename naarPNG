@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-for picture in $1/*.jpg; do
-convert $picture -resize 128x128 $picture.png
-done
