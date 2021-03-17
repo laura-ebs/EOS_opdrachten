@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+
+std::string translate(std::string line, std::string argument)
+{ std::string result = ""; 
+for (unsigned i=0; i<line.size(); i++){
+  int myintargument= std::stoi(argument);
+   result+=(((line[i]+myintargument)-'a')%26)+'a'; 
+}
+  return result; }
+
+int main(int argc, char *argv[])
+{ std::string line;
+
+  if(argc != 2)
+  { std::cerr << "Deze functie heeft exact 1 argument nodig" << std::endl;
+    return -1; }
+
+  while(std::getline(std::cin, line))
+  { std::cout << translate(line, argv[1]) << std::endl; } 
+
+  return 0; }
