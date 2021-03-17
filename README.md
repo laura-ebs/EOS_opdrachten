@@ -1,2 +1,2 @@
 # EOS_opdrachten
-jaar 1 opdrachten eos
+Blok C EOS opdrachten
