@@ -9,7 +9,7 @@ int main(void){
 int paars=15;
 int groen=16;
 int wit=1;
-int blauw=4;
+int blauw=10;
 int rood=5;
 int geel=6;
 
