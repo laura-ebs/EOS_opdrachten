@@ -33,10 +33,11 @@ bool yellowthen=LOW;
 //vector om kleuren in op te slaan
 vector<int> kleuren={};
 
-cout<<"druk een knop in";
-
 
 for (;;){
+	
+cout<<"Druk de knop in voor de eerste kleur: \n";
+
 //lezen input van knop
 bool purplenow=digitalRead(paars);
 bool greennow=digitalRead(groen);
@@ -45,7 +46,7 @@ bool bluenow=digitalRead(blauw);
 bool rednow=digitalRead(rood);
 bool yellownow=digitalRead(geel);
 
-delay(3000);
+delay(6000);
 
 	if(purplethen != purplenow){
 		if(purplenow==HIGH){
@@ -85,6 +86,62 @@ delay(3000);
 	redthen = rednow;
 	yellowthen = yellownow;
 	if(kleuren.size()==1){
+	 break;
+	}
+}
+
+for (;;){
+	
+cout<<"Druk de knop in voor de tweede kleur: \n";
+
+//lezen input van knop
+bool purplenow=digitalRead(paars);
+bool greennow=digitalRead(groen);
+bool whitenow=digitalRead(wit);
+bool bluenow=digitalRead(blauw);
+bool rednow=digitalRead(rood);
+bool yellownow=digitalRead(geel);
+
+delay(6000);
+
+	if(purplethen != purplenow){
+		if(purplenow==HIGH){
+			kleuren.push_back(5);
+			
+		}
+	}
+	if(greenthen != greennow){
+		if(greennow==HIGH){
+			kleuren.push_back(1);
+		}
+	}
+	if(whitethen != whitenow){
+		if(whitenow==HIGH){
+			kleuren.push_back(4);
+		}
+	}
+	if(bluethen != bluenow){
+		if (bluenow==HIGH){
+			kleuren.push_back(0);
+			}
+	}
+	if(redthen != rednow){
+		if(rednow==HIGH){
+			kleuren.push_back(2);
+		}
+	}
+	if(yellowthen != yellownow){
+		if (yellownow==HIGH){
+			kleuren.push_back(3);
+		}
+	}
+	purplethen = purplenow;
+	greenthen = greennow;
+	whitethen = whitenow;
+	bluethen = bluenow;
+	redthen = rednow;
+	yellowthen = yellownow;
+	if(kleuren.size()==2){
 		
 	 cout<<"De ander speler moet nu uw code raden \n";
 	 break;
@@ -97,3 +154,4 @@ for(unsigned int i = 0; i < kleuren.size(); i++){
 	}
 	cout<<"\n";
 }
+
