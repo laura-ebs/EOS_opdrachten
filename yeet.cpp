@@ -127,11 +127,13 @@ yellownow=digitalRead(geel);
 	if(greenthen != greennow){
 		if(greennow==HIGH){
 			kleuren.push_back(1);
+			greennow=LOW;
 		}
 	}
 	if(whitethen != whitenow){
 		if(whitenow==HIGH){
 			kleuren.push_back(4);
+			whitenow=LOW;
 		}
 	}
 	if(bluethen != bluenow){
@@ -183,11 +185,13 @@ bool yellownow=digitalRead(geel);
 	if(greenthen != greennow){
 		if(greennow==HIGH){
 			kleuren.push_back(1);
+			greennow=LOW;
 		}
 	}
 	if(whitethen != whitenow){
 		if(whitenow==HIGH){
 			kleuren.push_back(4);
+			whitenow=LOW;
 		}
 	}
 	if(bluethen != bluenow){
@@ -242,11 +246,13 @@ bool yellownow=digitalRead(geel);
 	if(greenthen != greennow){
 		if(greennow==HIGH){
 			kleuren.push_back(1);
+			greennow=LOW;
 		}
 	}
 	if(whitethen != whitenow){
 		if(whitenow==HIGH){
 			kleuren.push_back(4);
+			whitenow=LOW;
 		}
 	}
 	if(bluethen != bluenow){
