@@ -1,5 +1,4 @@
-
-		#include<wiringPi.h>
+#include<wiringPi.h>
 #include<iostream>
 #include<vector>
 using namespace std;
@@ -41,7 +40,7 @@ bool yellownow=LOW;
 //vector om kleuren in op te slaan
 vector<int> kleuren={};
 
-
+//Opslaan eerste kleur in een vector
 for (;;){
 	
 cout<<"Druk de knop in voor de eerste kleur: \n";
@@ -102,7 +101,9 @@ yellownow=digitalRead(geel);
 	 break;
 	}
 }
+	
 
+//Opslaan tweede kleur in een vector
 for (;;){
 	
 cout<<"Druk de knop in voor de tweede kleur: \n";
@@ -119,6 +120,7 @@ yellownow=digitalRead(geel);
 	if(purplethen != purplenow){
 		if(purplenow==HIGH){
 			kleuren.push_back(5);
+			purplenow=LOW;
 			
 		}
 	}
@@ -157,7 +159,8 @@ yellownow=digitalRead(geel);
 	 break;
 	}
 }
-
+	
+//Opslaan eerste kleur in een vector
 for (;;){
 	
 cout<<"Druk de knop in voor de derde kleur: \n";
@@ -173,7 +176,8 @@ bool yellownow=digitalRead(geel);
 
 	if(purplethen != purplenow){
 		if(purplenow==HIGH){
-			kleuren.push_back(5);	
+			kleuren.push_back(5);
+			purplenow=LOW;
 		}
 	}
 	if(greenthen != greennow){
@@ -212,7 +216,8 @@ bool yellownow=digitalRead(geel);
 	 break;
 	}
 }
-
+	
+//Opslaan laaste kleur in een vector
 for (;;){
 	
 cout<<"Druk de knop in voor de laaste kleur: \n";
@@ -230,6 +235,7 @@ bool yellownow=digitalRead(geel);
 	if(purplethen != purplenow){
 		if(purplenow==HIGH){
 			kleuren.push_back(5);
+			purplenow=LOW;
 			
 		}
 	}
